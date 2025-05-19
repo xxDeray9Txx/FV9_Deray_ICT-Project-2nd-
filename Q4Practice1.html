@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>KAJDN</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+		.box{
+		background-color: black;
+
+	color: #000000;
+            padding: 15px;
+            border-radius: 15px;
+            margin: 15px;
+            color: black;
+            font-family: Amasis MT Pro;
+            font-size: 15px;
+}
+	</style>
+</head>
+<body>
+	<center>
+		<div class="box">
+		<h2>Math Methods</h2>
+	</div>
+		<br>
+		<details ontoggle="message1()">
+			<summary>
+				<u>Instructions</u>
+				<br>
+				<i id="message"></i>
+			</summary>
+		</details>
+		<br>
+
+		<input type="number" class="form-control" id="num1">
+		<br>
+		<input type="number" class="form-control" id="num2">
+
+
+		<kbd id="result1">Output 1</kbd>
+		<br>
+		<kbd id="result2">Output 2</kbd>
+
+		<button type="button" class="btn btn-info" onclick="RndResult()">Round it off</button>
+		<br>
+		<button type="button" class="btn btn-info" onclick="PowResult()">Square it off</button>
+		<br>
+		<button type="button" class="btn btn-info" onclick="SqrtResult()">Square Root it off</button>
+		<br>
+		<button type="button" class="btn btn-info" onclick="absResult()">Shake it off</button>
+		<br>
+		<button type="button" class="btn btn-info" onclick="randomResult()">Randomize it off</button>
+		<br>
+
+
+<button type="button" class="btn btn-success" onclick="MinMaxResult()">Get the lowest number (7, -8, 22)</button>
+<button type="button" class="btn btn-success" onclick="MinMaxResult()">Get the highest number (7, -8, 22)</button>
+
+<script>
+	function message1(){
+		document.getElementById("message").innerHTML = "Place 2 numbers, any numbers, then on the bottom are the buttons you can click";
+	}
+function RndResult() {
+	var num1=document.getElementById("num1").value;
+	var num2 = document.getElementById("num2").value;
+
+	document.getElementById("result1").innerHTML = Math.round(num1);
+	document.getElementById("result2").innerHTML = Math.round(num2);
+}
+
+function PowResult() {
+	var num1 = document.getElementById("num1").value;
+	var num2 = document.getElementById("num2").value;
+
+	document.getElementById("result1").innerHTML = Math.pow(num1, 2);
+	document.getElementById("result2").innerHTML = Math.pow(num2, 3);
+}
+
+function SqrtResult(){
+	var num1 = document.getElementById("num1").value;
+	var num2 = document.getElementById("num2").value;
+
+	document.getElementById("result1").innerHTML = Math.round(Math.sqrt(num1) * 100)/100;
+	document.getElementById("result2").innerHTML = Math.round(Math.sqrt(num2) * 100)/100;
+}
+
+function MinMaxResult(){
+	var num1 = document.getElementById("num1").value;
+	var num2 = document.getElementById("num2").value;
+
+	document.getElementById("result1").innerHTML = Math.min(num1, num2, 7, -8, 22);
+	document.getElementById("result2").innerHTML = Math.max (num1, num2, 7, -8, 22);
+}
+
+
+function RndmResult(){
+	var num1 = document.getElementById("num1").value;
+	var num2 = document.getElementById("num2").value;
+
+	document.getElementById("result1").innerHTML = Math.round(Math.random(num1) * 10);
+	document.getElementById("result2").innerHTML = Math.round(Math.random(num2) * 100);
+}
+function absResult(){
+	var num1 = document.getElementById("num1").value;
+	var num2 = document.getElementById("num2").value;
+
+	document.getElementById("result1").innerHTML = Math.round(Math.random(num1) * 10);
+	document.getElementById("result2").innerHTML = Math.round(Math.random(num2) * 100);
+}
+</script>
+
+</body>
+</html>
